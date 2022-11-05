@@ -13,7 +13,7 @@ public class BubbleSort extends Sort{
     public void bubbleSort() {
         boolean swapped = false;
         for(int i = 0; i < list.length; i++) {
-            for(int j = 0; j < list.length; j++)
+            for(int j = 0; j < list.length-1; j++)
                 if(list[j] > list[j+1]) {
                     swap(j, j+1);
                     swapped = true;
