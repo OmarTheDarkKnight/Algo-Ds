@@ -28,4 +28,9 @@ public class Sort {
         System.out.println("\n******* Recursive Bubble Sort *********");
         new BubbleSort(list).recursive_bubbleSort(list, list.length);
     }
+
+    public static void selectionSort(int[] list) {
+        System.out.println("\n******* Selection Sort *********");
+        new SelectionSort(list).selectionSort();
+    }
 }
