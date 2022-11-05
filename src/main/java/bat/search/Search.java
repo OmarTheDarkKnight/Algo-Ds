@@ -1,15 +1,10 @@
 package bat.search;
 
 public class Search {
-    int counter;
     int[] list;
 
-    public Search() {
-        counter = 0;
-    }
-
-    public Search(int[] list) {
-        this.list = list;
+    Search(int[] list) {
+       this.list = list;
     }
 
     public void targetFoundPrinter(int position) {
@@ -20,18 +15,18 @@ public class Search {
         System.out.println("Target not found in list.\n*********************************\n");
     }
 
-    public void linearSearch(int target) {
+    public static void linearSearch(int[] list, int target) {
         System.out.println("\n******* Linear Search *********");
-        new LinearSearch().linearSearch(target);
+        new LinearSearch(list).linearSearch(target);
     }
 
-    public void binarySearch(int target) {
+    public static void binarySearch(int[] list, int target) {
         System.out.println("\n******* Binary Search *********");
-        new BinarySearch().binarySearch(target);
+        new BinarySearch(list).binarySearch(target);
     }
 
-    public void recursive_binarySearch(int target) {
+    public static void recursive_binarySearch(int[] list, int target) {
         System.out.println("\n******* Recursive Binary Search *********");
-        new BinarySearch().recursive_binarySearch(list, target, 0, counter);
+        new BinarySearch(list).recursive_binarySearch(list, target, 0);
     }
 }

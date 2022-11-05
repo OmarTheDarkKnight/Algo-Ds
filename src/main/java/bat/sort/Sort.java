@@ -1,33 +1,31 @@
 package bat.sort;
 
 public class Sort {
-    int[] list;
+    public int[] list;
 
-    public Sort() {}
-
-    public Sort(int[] list) {
+    Sort(int[] list) {
         this.list = list;
     }
 
     public void listPrinter() {
-        for(int item : list)
-            System.out.println(item + " -> ");
+        for(int item : this.list)
+            System.out.print(item + " -> ");
         System.out.println("END" + "\n*********************************\n");
     }
 
     public void swap(int index1, int index2) {
-        int temp = list[index1];
-        list[index1] = list[index2];
-        list[index2] = temp;
+        int temp = this.list[index1];
+        this.list[index1] = this.list[index2];
+        this.list[index2] = temp;
     }
 
-    public void bubbleSort() {
+    public static void bubbleSort(int[] list) {
         System.out.println("\n******* Bubble Sort *********");
-        new BubbleSort().bubbleSort();
+        new BubbleSort(list).bubbleSort();
     }
 
-    public void recursive_bubbleSort() {
+    public static void recursive_bubbleSort(int[] list) {
         System.out.println("\n******* Recursive Bubble Sort *********");
-        new BubbleSort().recursive_bubbleSort(list, list.length);
+        new BubbleSort(list).recursive_bubbleSort(list, list.length);
     }
 }

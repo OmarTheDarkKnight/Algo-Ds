@@ -1,9 +1,7 @@
 package bat.sort;
 
 public class BubbleSort extends Sort{
-    public BubbleSort() {
-        super();
-    }
+    public BubbleSort(int[] list) {super(list);}
 
     /**
      * Bubble sort is the simplest of all the sorting algorithms

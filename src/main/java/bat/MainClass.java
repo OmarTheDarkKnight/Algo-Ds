@@ -1,6 +1,7 @@
 package bat;
 
 import bat.search.Search;
+import bat.sort.Sort;
 
 import java.util.Scanner;
 
@@ -16,9 +17,11 @@ public class MainClass {
 //        target = sc.nextInt();
         target = 11;
 
-        Search search = new Search(list);
-        search.linearSearch(target);
-        search.binarySearch(target);
-        search.recursive_binarySearch(target);
+        Search.linearSearch(list, target);
+        Search.binarySearch(list, target);
+        Search.recursive_binarySearch(list, target);
+
+        list = new int[]{8, 9, 58, 52, 7, 36, 1, 28, 14, 75, 7, 6, 10};
+        Sort.bubbleSort(list);
     }
 }

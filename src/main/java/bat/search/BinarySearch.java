@@ -1,11 +1,9 @@
 package bat.search;
 
-import java.util.stream.IntStream;
+import java.util.Arrays;
 
 public class BinarySearch extends Search {
-    BinarySearch() {
-        super();
-    }
+    BinarySearch(int[] list) {super(list);}
 
     /**
      * Binary search -> Searches through the list by splitting it in half
@@ -25,7 +23,6 @@ public class BinarySearch extends Search {
         int half;
         while(first <= last) {
             half = (int) Math.floor((double)((first + last) / 2));
-            System.out.println("Iteration : " + ++counter);
             if(list[half] == target) {
                 targetFoundPrinter(half);
                 return;
@@ -42,26 +39,24 @@ public class BinarySearch extends Search {
     /**
      * Same as Binary search except it is done recursively
      * Tow extra parameters are used
-     * @param counter is used to keep track if the number of iteration.
+     *
      * @param prevHalf cascades the midpoint value for the prev iteration to keep track of the position of the target
      * */
-    public void recursive_binarySearch(int[] list, int target, int prevHalf, int counter) {
+    public void recursive_binarySearch(int[] list, int target, int prevHalf) {
         int first = 0;
         int last = list.length - 1;
         if(list.length > 0) {
             int half = (int) Math.floor((double)((first + last) / 2));
-            System.out.println("Iteration : " + ++counter);
             if(list[half] == target) {
                 targetFoundPrinter(prevHalf);
-                return;
             }
             else if(target > list[half])
-                recursive_binarySearch(IntStream.range(half+1, list.length).map(i -> list[i]).toArray(),
-                        target, prevHalf + half+1, counter);
+                recursive_binarySearch(Arrays.stream(list, half + 1, list.length).toArray(),
+                        target, prevHalf + half+1);
 
             else if(target < list[half])
-                recursive_binarySearch(IntStream.range(first, half).map(i -> list[i]).toArray(),
-                        target, prevHalf, counter);
+                recursive_binarySearch(Arrays.stream(list, first, half).toArray(),
+                        target, prevHalf);
 
         } else {
             targetNotFoundPrinter();

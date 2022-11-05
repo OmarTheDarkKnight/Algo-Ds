@@ -1,9 +1,7 @@
 package bat.search;
 
 class LinearSearch extends Search {
-    LinearSearch() {
-        super();
-    }
+    LinearSearch(int[] list) {super(list);}
 
     /**
      * Linear search -> Searches through the list one by one
@@ -15,7 +13,6 @@ class LinearSearch extends Search {
      * */
     public void linearSearch(int target) {
         for(int i=0; i < list.length; i++) {
-            System.out.println("Iteration : " + ++counter);
             if(list[i] == target){
                 targetFoundPrinter(i);
                 return;
