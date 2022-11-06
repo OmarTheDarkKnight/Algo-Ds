@@ -43,4 +43,9 @@ public class Sort {
         System.out.println("\n********* Merge Sort ***********");
         new MergeSort(list).mergeSort();
     }
+
+    public static void quickSort(int[] list) {
+        System.out.println("\n********* Quick Sort ***********");
+        new QuickSort(list).quickSort();
+    }
 }

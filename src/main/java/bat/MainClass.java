@@ -26,5 +26,6 @@ public class MainClass {
         Sort.selectionSort(list);
         Sort.insertionSort(list);
         Sort.mergeSort(list);
+        Sort.quickSort(list);
     }
 }
