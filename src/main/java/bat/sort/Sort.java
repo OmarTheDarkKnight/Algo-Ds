@@ -38,4 +38,9 @@ public class Sort {
         System.out.println("\n******* Insertion Sort *********");
         new InsertionSort(list).insertionSort();
     }
+
+    public static void mergeSort(int[] list) {
+        System.out.println("\n********* Merge Sort ***********");
+        new MergeSort(list).mergeSort();
+    }
 }

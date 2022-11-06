@@ -25,5 +25,6 @@ public class MainClass {
         Sort.bubbleSort(list);
         Sort.selectionSort(list);
         Sort.insertionSort(list);
+        Sort.mergeSort(list);
     }
 }
