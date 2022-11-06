@@ -33,4 +33,9 @@ public class Sort {
         System.out.println("\n******* Selection Sort *********");
         new SelectionSort(list).selectionSort();
     }
+
+    public static void insertionSort(int[] list) {
+        System.out.println("\n******* Insertion Sort *********");
+        new InsertionSort(list).insertionSort();
+    }
 }

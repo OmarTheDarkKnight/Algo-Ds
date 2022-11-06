@@ -24,5 +24,6 @@ public class MainClass {
         list = new int[]{8, 9, 58, 52, 7, 36, 1, 28, 14, 75, 7, 6, 10};
         Sort.bubbleSort(list);
         Sort.selectionSort(list);
+        Sort.insertionSort(list);
     }
 }
